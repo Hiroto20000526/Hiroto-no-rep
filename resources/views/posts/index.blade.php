@@ -47,6 +47,15 @@
             <div class='footer'>
                 <a href="/">戻る</a>
             </div>
+            <<div>
+                @foreach($questions as $question)
+                    <div>
+                        <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                            {{ $question['title'] }}
+                        </a>
+                    </div>
+                @endforeach
+            </div>
             <div class='user_name'>ログインユーザー:{{ Auth::user()->name }}</div>
         </body>
         
